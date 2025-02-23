@@ -38,7 +38,7 @@ RUN apt-get update \
     && ldconfig \
     && cd ../.. \
     # Compile and install mosquitto
-    && git clone --depth 1 -b "v${MOSQUITTO_VERSION}" \
+    && git clone --depth 1 -b "${MOSQUITTO_VERSION}" \
        https://github.com/oloendithas/mosquitto \
     \
     && cd mosquitto \
