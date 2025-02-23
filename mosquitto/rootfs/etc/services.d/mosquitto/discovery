@@ -11,7 +11,7 @@ declare discovery_password
 declare service_password
 
 # Wait for mosquitto to start before continuing
-bashio::net.wait_for 1883
+bashio::net.wait_for 2883
 
 # Read the existing values
 discovery_password=$(bashio::jq "${SYSTEM_USER}" ".homeassistant.password")
@@ -20,7 +20,7 @@ service_password=$(bashio::jq "${SYSTEM_USER}" ".addons.password")
 # Create discovery config payload for Home Assistant
 config=$(bashio::var.json \
     host "$(hostname)" \
-    port "^1883" \
+    port "^2883" \
     ssl "^false" \
     protocol "3.1.1" \
     username "homeassistant" \
@@ -37,7 +37,7 @@ fi
 # Create service config payload for other add-ons
 config=$(bashio::var.json \
     host "$(hostname)" \
-    port "^1883" \
+    port "^2883" \
     ssl "^false" \
     protocol "3.1.1" \
     username "addons" \

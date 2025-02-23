@@ -38,7 +38,7 @@ configuration:
     description: >-
       If enabled will turn on debug logging for mosquitto and the auth plugin.
 network:
-  1883/tcp: Normal MQTT
-  1884/tcp: MQTT over WebSocket
+  2883/tcp: Normal MQTT
+  2884/tcp: MQTT over WebSocket
   8883/tcp: Normal MQTT with SSL
   8884/tcp: MQTT over WebSocket with SSL

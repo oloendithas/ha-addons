@@ -45,10 +45,10 @@ auth_opt_http_aclcheck_uri /acl
 include_dir /share/{{ .customize_folder }}
 {{ end }}
 
-listener 1883
+listener 2883
 protocol mqtt
 
-listener 1884
+listener 2884
 protocol websockets
 
 {{ if .ssl }}
