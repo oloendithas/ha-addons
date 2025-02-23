@@ -39,7 +39,7 @@ RUN apt-get update \
     && cd ../.. \
     # Compile and install mosquitto
     && git clone --depth 1 -b "v${MOSQUITTO_VERSION}" \
-       https://github.com/eclipse/mosquitto \
+       https://github.com/oloendithas/mosquitto \
     \
     && cd mosquitto \
     && make WITH_WEBSOCKETS=yes WITH_SRV=yes \

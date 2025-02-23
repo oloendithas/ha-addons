@@ -1,9 +1,9 @@
 ---
 version: 6.5.0
-slug: mosquitto
-name: Mosquitto broker
+slug: mosquitto-custom
+name: Mosquitto custom broker
 description: An Open Source MQTT broker
-url: https://github.com/home-assistant/addons/tree/master/mosquitto
+url: https://github.com/oloendithas/ha-addons/tree/main/mosquitto
 codenotary: notary@home-assistant.io
 arch:
   - armhf
@@ -14,7 +14,7 @@ arch:
 auth_api: true
 discovery:
   - mqtt
-image: homeassistant/{arch}-addon-mosquitto
+image: homeassistant/{arch}-addon-mosquitto-custom
 map:
   - ssl
   - share
@@ -25,7 +25,7 @@ options:
   keyfile: privkey.pem
   customize:
     active: false
-    folder: mosquitto
+    folder: mosquitto-custom
 ports:
   1883/tcp: 1883
   1884/tcp: 1884
